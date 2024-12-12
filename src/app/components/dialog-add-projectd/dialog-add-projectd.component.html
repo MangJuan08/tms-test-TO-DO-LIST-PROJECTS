@@ -1,0 +1,28 @@
+<mat-dialog-content class="mat-typography">
+    <h1>ADD NEW PROJECT</h1>
+    <br>
+    <form [formGroup]="newProject">
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>TITLE</mat-label>
+          <input matInput placeholder="Placeholder" id="title" formControlName="title" matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+          <mat-label>DESCRIPTION</mat-label>
+          <input matInput placeholder="Placeholder" id="description" formControlName="description"
+            matInput>
+        </mat-form-field>
+          <br>
+          <mat-form-field appearance="outline">
+            <mat-label>USER</mat-label>
+            <input matInput placeholder="Placeholder" id="user" formControlName="user"
+              matInput>
+          </mat-form-field>
+      </div>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close] (click)="addNewProject(newProject)">ADD TABLE</button>
+  </mat-dialog-actions>
+

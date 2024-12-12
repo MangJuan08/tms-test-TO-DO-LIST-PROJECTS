@@ -17,4 +17,8 @@ export class ProjectsService {
   deleteProject(id:Number) {
     return this.http.delete("http://localhost:3000/projects/"+id);
   }
+
+  addNewProject(project:any) {
+    return this.http.post("http://localhost:3000/projects",project);
+  }
 }

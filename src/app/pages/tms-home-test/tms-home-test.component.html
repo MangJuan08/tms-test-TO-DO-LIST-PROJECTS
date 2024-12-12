@@ -6,80 +6,55 @@
         <br><br>
         <div class="row">
             <div class="col-md-4">
-                <h3>Nuovi</h3>
-
+                <h3>NUOVI</h3>
+                <mat-divider></mat-divider>
+                <br>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title> ACTIONS </mat-panel-title>
+                    </mat-expansion-panel-header>
+                
+                    <button (click)="openDialog()" mat-icon-button><mat-icon>add</mat-icon></button>
+                  </mat-expansion-panel>
                 <br><br>
-                <div *ngFor="let i of newProjects">
-                    <mat-card appearance="outlined">
-                        <mat-card-header>
-                            <mat-card-title> {{i.title}}</mat-card-title>
-                            <mat-card-subtitle>Herding group</mat-card-subtitle>
-                            <button mat-icon-button class="close" (click)="deleteProject(i.id)">
-                                <mat-icon>
-                                    cancel
-                                </mat-icon>
-                            </button>
-                        </mat-card-header>
-                        <mat-card-footer class="example-card-footer">
-                            <mat-chip-set aria-label="Chihuahua traits" style="margin-left:10px; margin-bottom:10px">
-                                <mat-chip>JB</mat-chip>
-                            </mat-chip-set>
-                        </mat-card-footer>
-                    </mat-card>
+                <div *ngFor="let i of newProjects; let num = index">
+                    <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="newProjects.length"></app-card>
                     <br>
                 </div>
-
-
             </div>
             <div class="col-md-4">
                 <h3>ON PROGRESS</h3>
+                <mat-divider></mat-divider>
+                <br>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title> ACTIONS </mat-panel-title>
+                    </mat-expansion-panel-header>
+                
+                    <button (click)="openDialog()" mat-icon-button><mat-icon>add</mat-icon></button>
+                  </mat-expansion-panel>
                 <br><br>
-                <div *ngFor="let i of onProgressProjects">
-                    <mat-card appearance="outlined">
-                        <mat-card-header>
-                            <mat-card-title> {{i.title}}</mat-card-title>
-                            <mat-card-subtitle>Herding group</mat-card-subtitle>
-                            <button mat-icon-button class="close" (click)="deleteProject(i.id)">
-                                <mat-icon>
-                                    cancel
-                                </mat-icon>
-                            </button>
-                        </mat-card-header>
-                        <mat-card-footer class="example-card-footer">
-                            <mat-chip-set aria-label="Chihuahua traits" style="margin-left:10px; margin-bottom:10px">
-                                <mat-chip>JB</mat-chip>
-                            </mat-chip-set>
-                        </mat-card-footer>
-
-                    </mat-card>
+                <div *ngFor="let i of onProgressProjects; let num = index">
+                    <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="onProgressProjects.length"></app-card>
                     <br>
                 </div>
-
             </div>
             <div class="col-md-4 ">
                 <h3>COMPLETATI</h3>
+                <mat-divider></mat-divider>
+                <br>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title> ACTIONS </mat-panel-title>
+                    </mat-expansion-panel-header>
+                
+                    <button (click)="openDialog()" mat-icon-button><mat-icon>add</mat-icon></button>
+                  </mat-expansion-panel>
                 <br><br>
-                <div *ngFor="let i of completeProjects">
-                    <mat-card appearance="outlined">
-                        <mat-card-header>
-                            <mat-card-title> {{i.title}}</mat-card-title>
-                            <mat-card-subtitle>Herding group</mat-card-subtitle>
-                            <button mat-icon-button class="close" (click)="deleteProject(i.id)">
-                                <mat-icon>
-                                    cancel
-                                </mat-icon>
-                            </button>
-                        </mat-card-header>
-                        <mat-card-footer class="example-card-footer">
-                            <mat-chip-set aria-label="Chihuahua traits" style="margin-left:10px; margin-bottom:10px">
-                                <mat-chip>JB</mat-chip>
-                            </mat-chip-set>
-                        </mat-card-footer>
-                    </mat-card>
+                <div *ngFor="let i of completeProjects; let num = index">
+                    <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="completeProjects.length"></app-card>
                     <br>
                 </div>
             </div>
-
         </div>
-
     </div>
