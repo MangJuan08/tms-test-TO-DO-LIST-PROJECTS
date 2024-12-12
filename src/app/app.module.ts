@@ -12,6 +12,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
 import { DialogAddProjectdComponent } from './components/dialog-add-projectd/dialog-add-projectd.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DialogEditProjectdComponent } from './components/dialog-edit-projectd/dialog-edit-projectd.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TmsHomeTestComponent,
     ProjectsComponent,
     CardComponent,
-    DialogAddProjectdComponent
+    DialogAddProjectdComponent,
+    DialogEditProjectdComponent
   ],
   imports: [
     BrowserModule,

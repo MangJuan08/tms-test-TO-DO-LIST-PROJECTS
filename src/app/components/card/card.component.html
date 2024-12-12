@@ -12,6 +12,9 @@
     <mat-card-footer class="example-card-footer">
         <mat-chip-set aria-label="Chihuahua traits" style="margin-left:10px; margin-bottom:10px">
             <mat-chip>{{getFirstLetterOfNameAndSurname(projects.user)}}</mat-chip>
+                <button (click)="openDialog(projects)" mat-icon-button> <mat-chip> <mat-icon>
+                    edit
+                </mat-icon></mat-chip></button>
         </mat-chip-set>
         <button mat-icon-button class="user">
             {{num+1}}/{{totalLength}}

@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DialogEditProjectdComponent } from '../dialog-edit-projectd/dialog-edit-projectd.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-card',
@@ -11,7 +13,7 @@ export class CardComponent {
 @Output() deleteProject= new EventEmitter<any>();;
 total: any;
 @Input() totalLength: any;
-constructor() {
+constructor(public dialog: MatDialog) {
 }
 
 ngOnInit() {
@@ -21,6 +23,17 @@ ngOnInit() {
 
 deleteProjectR(id:any) {
 this.deleteProject.emit(id)
+}
+
+openDialog(project:any) {
+  let dialogRef = this.dialog.open(DialogEditProjectdComponent, {
+    width: '500px',
+    data: { id: project.id, description: project.description, stato: project.stato, user: project.user, title: project.title }
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+
+  });
 }
 
 getFirstLetterOfNameAndSurname(completeName: any) {
