@@ -3,6 +3,7 @@ import { ProjectsService } from '../../services/projects.service';
 import { Projects } from '../../model/projects.model';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddProjectComponent } from '../../components/dialog-add-project/dialog-add-project.component';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-tms-home-test',
@@ -15,7 +16,7 @@ export class TmsHomeTestComponent {
   newProjects: any;
   onProgressProjects: any;
   completeProjects: any;
-  constructor(private projectService: ProjectsService, public dialog: MatDialog) {
+  constructor(private projectService: ProjectsService, public dialog: MatDialog, private toastr: ToastrService) {
     this.isLoading = true;
 
     this.projectService.getAllProjects().subscribe((res: Projects[]) => {
@@ -43,6 +44,7 @@ export class TmsHomeTestComponent {
 
   deleteProject(id: any) {
     this.projectService.deleteProject(id).subscribe(() => {
+      this.toastr.success('PROJECT DELETED COMPLETELY');
       this.reloadProjects();
     })
   }
@@ -79,6 +81,7 @@ export class TmsHomeTestComponent {
 
   addNewProject(result:any) {
     this.projectService.addNewProject(result).subscribe((res: any) => {
+      this.toastr.success('PROJECT ADDED COMPLETELY');
       this.reloadProjects();
     });
   }
@@ -86,6 +89,7 @@ export class TmsHomeTestComponent {
   editProject(result:any) {
     console.log(result)
     this.projectService.editProject(result).subscribe((res: any) => {
+      this.toastr.success('PROJECT MODIFIED COMPLETELY');
       this.reloadProjects();
     });
     console.log(result)

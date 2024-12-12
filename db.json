@@ -11,15 +11,15 @@
       "id": "2",
       "title": "NUOVO",
       "description": "description",
-      "stato": "NUOVO",
-      "user": "JOHN BAUTISTA"
+      "user": "JOHN BAUTISTAS",
+      "stato": "NUOVO"
     },
     {
       "id": "3",
-      "title": "PROGRESS",
+      "title": "COMPLETATO",
       "description": "description",
-      "stato": "PROGRESS",
-      "user": "JOHN BAUTISTA"
+      "user": "JOHN BAUTISTA",
+      "stato": "COMPLETATO"
     },
     {
       "id": "4",
@@ -27,13 +27,6 @@
       "description": "description",
       "stato": "PROGRESS",
       "user": "JOHN BAUTISTA"
-    },
-    {
-      "id": "5",
-      "title": "NEW PROJECT",
-      "description": "description",
-      "user": "JOHN BAUTISTA",
-      "stato": "NUOVO"
     },
     {
       "id": "6",
@@ -48,6 +41,13 @@
       "description": "description",
       "stato": "COMPLETATO",
       "user": "JOHN BAUTISTA"
+    },
+    {
+      "id": "eaaf",
+      "title": "NUOVO",
+      "description": "a",
+      "user": "J K",
+      "stato": "NUOVO"
     }
   ]
 }

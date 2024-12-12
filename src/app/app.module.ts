@@ -13,6 +13,7 @@ import { CardComponent } from './components/card/card.component';
 import { DialogAddProjectComponent } from './components/dialog-add-project/dialog-add-project.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogEditProjectComponent } from './components/dialog-edit-project/dialog-edit-project.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DialogEditProjectComponent } from './components/dialog-edit-project/dia
     MaterialModule,
     NgxSkeletonLoaderModule,
     ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [provideHttpClient()],
   bootstrap: [AppComponent]

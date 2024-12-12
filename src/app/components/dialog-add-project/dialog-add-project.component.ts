@@ -20,6 +20,7 @@ export class DialogAddProjectComponent {
   }
 
   addNewProject(project:any): void {
+   
     this.dialogRef.close(this.newProject);
   }
 }
