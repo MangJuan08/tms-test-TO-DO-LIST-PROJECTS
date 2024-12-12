@@ -18,7 +18,7 @@
                   </mat-expansion-panel>
                 <br><br>
                 <div *ngFor="let i of newProjects; let num = index">
-                    <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="newProjects.length"></app-card>
+                    <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="newProjects.length" (editProject)="editProject($event)"></app-card>
                     <br>
                 </div>
             </div>

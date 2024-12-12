@@ -82,6 +82,13 @@ export class TmsHomeTestComponent {
       this.reloadProjects();
     });
   }
+
+  editProject(result:any) {
+    this.projectService.editProject(result).subscribe((res: any) => {
+      this.reloadProjects();
+    });
+    console.log(result)
+  }
   
   reloadProjects() {
     this.newProjects = [];

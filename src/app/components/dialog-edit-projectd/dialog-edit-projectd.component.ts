@@ -23,4 +23,9 @@ export class DialogEditProjectdComponent {
   ngOnInit() {
     console.log(this.data)
   }
+
+  
+  edit(project:any): void {
+    this.dialogRef.close(this.editProject);
+  }
 }

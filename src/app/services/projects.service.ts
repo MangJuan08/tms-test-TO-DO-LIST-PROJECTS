@@ -21,4 +21,9 @@ export class ProjectsService {
   addNewProject(project:any) {
     return this.http.post("http://localhost:3000/projects",project);
   }
+
+  editProject(project:any) {
+    return this.http.put("http://localhost:3000/projects",project);
+  }
+
 }

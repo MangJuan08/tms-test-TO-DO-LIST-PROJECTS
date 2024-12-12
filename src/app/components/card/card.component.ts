@@ -11,6 +11,7 @@ export class CardComponent {
 @Input() projects: any;
 @Input() num: any;
 @Output() deleteProject= new EventEmitter<any>();;
+@Output() editProject= new EventEmitter<any>();;
 total: any;
 @Input() totalLength: any;
 constructor(public dialog: MatDialog) {
@@ -32,9 +33,16 @@ openDialog(project:any) {
   });
 
   dialogRef.afterClosed().subscribe(result => {
-
+    let editedProject = {
+      title: result.value.title,
+      description: result.value.description,
+      user: result.value.user,
+      stato: result.value.stato
+    }
+    this.editProject.emit(editedProject);
   });
 }
+
 
 getFirstLetterOfNameAndSurname(completeName: any) {
   let nameParts = completeName.split(" ");
