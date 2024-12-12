@@ -1,0 +1,20 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Projects } from '../model/projects.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProjectsService {
+
+  constructor(private http:HttpClient) { }
+
+  getAllProjects(): Observable<Projects[]> {
+    return this.http.get<Projects[]>("http://localhost:3000/projects")
+  }
+
+  deleteProject(id:Number) {
+    return this.http.delete("http://localhost:3000/projects/"+id);
+  }
+}

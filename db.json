@@ -1,0 +1,11 @@
+{
+    "projects": [
+      { "id": "1", "title": "Launch a new project", "description": "description", "stato": "NUOVO" },
+      { "id": "2", "title": "NUOVO", "description": "description", "stato": "NUOVO" },
+      { "id": "3", "title": "PROGRESS", "description": "description", "stato": "PROGRESS" },
+      { "id": "4", "title": "PROGRESS", "description": "description", "stato": "PROGRESS" },
+      { "id": "5", "title": "PROGRESS", "description": "description", "stato": "PROGRESS" },
+      { "id": "6", "title": "COMPLETATO", "description": "description", "stato": "COMPLETATO" },
+      { "id": "7", "title": "COMPLETATO", "description": "description", "stato": "COMPLETATO" }
+    ]
+  }
