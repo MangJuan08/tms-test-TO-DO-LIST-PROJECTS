@@ -3,14 +3,14 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialog-add-projectd',
-  templateUrl: './dialog-add-projectd.component.html',
-  styleUrl: './dialog-add-projectd.component.scss'
+  selector: 'app-dialog-add-project',
+  templateUrl: './dialog-add-project.component.html',
+  styleUrl: './dialog-add-project.component.scss'
 })
-export class DialogAddProjectdComponent {
+export class DialogAddProjectComponent {
 
   newProject: any;
-  constructor(public dialogRef: MatDialogRef<DialogAddProjectdComponent>,
+  constructor(public dialogRef: MatDialogRef<DialogAddProjectComponent>,
   @Inject(MAT_DIALOG_DATA) public data: any) {
     this.newProject = new FormGroup({
       title: new FormControl(""),

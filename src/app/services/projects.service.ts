@@ -23,7 +23,7 @@ export class ProjectsService {
   }
 
   editProject(project:any) {
-    return this.http.put("http://localhost:3000/projects",project);
+    return this.http.put("http://localhost:3000/projects/"+project.id,project);
   }
 
 }

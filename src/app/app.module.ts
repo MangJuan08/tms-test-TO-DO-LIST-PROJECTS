@@ -10,9 +10,9 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
-import { DialogAddProjectdComponent } from './components/dialog-add-projectd/dialog-add-projectd.component';
+import { DialogAddProjectComponent } from './components/dialog-add-project/dialog-add-project.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DialogEditProjectdComponent } from './components/dialog-edit-projectd/dialog-edit-projectd.component';
+import { DialogEditProjectComponent } from './components/dialog-edit-project/dialog-edit-project.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +20,8 @@ import { DialogEditProjectdComponent } from './components/dialog-edit-projectd/d
     TmsHomeTestComponent,
     ProjectsComponent,
     CardComponent,
-    DialogAddProjectdComponent,
-    DialogEditProjectdComponent
+    DialogAddProjectComponent,
+    DialogEditProjectComponent
   ],
   imports: [
     BrowserModule,

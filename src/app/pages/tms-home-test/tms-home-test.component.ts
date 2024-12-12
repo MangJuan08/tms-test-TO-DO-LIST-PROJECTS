@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
 import { Projects } from '../../model/projects.model';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogAddProjectdComponent } from '../../components/dialog-add-projectd/dialog-add-projectd.component';
+import { DialogAddProjectComponent } from '../../components/dialog-add-project/dialog-add-project.component';
 
 @Component({
   selector: 'app-tms-home-test',
@@ -60,7 +60,7 @@ export class TmsHomeTestComponent {
   }
 
   openDialog(): void {
-    let dialogRef = this.dialog.open(DialogAddProjectdComponent, {
+    let dialogRef = this.dialog.open(DialogAddProjectComponent, {
       width: '500px',
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -84,6 +84,7 @@ export class TmsHomeTestComponent {
   }
 
   editProject(result:any) {
+    console.log(result)
     this.projectService.editProject(result).subscribe((res: any) => {
       this.reloadProjects();
     });

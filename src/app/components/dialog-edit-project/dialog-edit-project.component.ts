@@ -4,15 +4,16 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
-  selector: 'app-dialog-edit-projectd',
-  templateUrl: './dialog-edit-projectd.component.html',
-  styleUrl: './dialog-edit-projectd.component.scss'
+  selector: 'app-dialog-edit-project',
+  templateUrl: './dialog-edit-project.component.html',
+  styleUrl: './dialog-edit-project.component.scss'
 })
-export class DialogEditProjectdComponent {
+export class DialogEditProjectComponent {
   editProject: any;
-  constructor(public dialogRef: MatDialogRef<DialogEditProjectdComponent>,
+  constructor(public dialogRef: MatDialogRef<DialogEditProjectComponent>,
   @Inject(MAT_DIALOG_DATA) public data: any) {
     this.editProject = new FormGroup({
+      id: new FormControl(this.data.id),
       title: new FormControl(this.data.title),
       description: new FormControl(this.data.description),
       user: new FormControl(this.data.user),
@@ -26,6 +27,7 @@ export class DialogEditProjectdComponent {
 
   
   edit(project:any): void {
-    this.dialogRef.close(this.editProject);
+    console.log(project)
+    this.dialogRef.close(project);
   }
 }

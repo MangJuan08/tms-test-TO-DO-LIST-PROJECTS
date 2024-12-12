@@ -4,8 +4,8 @@
       "id": "1",
       "title": "Launch a new project",
       "description": "description",
-      "stato": "NUOVO",
-      "user": "JOHN BAUTISTA"
+      "user": "JOHN BAUTISTA",
+      "stato": "PROGRESS"
     },
     {
       "id": "2",
@@ -30,10 +30,10 @@
     },
     {
       "id": "5",
-      "title": "PROGRESS",
+      "title": "NEW PROJECT",
       "description": "description",
-      "stato": "PROGRESS",
-      "user": "JOHN BAUTISTA"
+      "user": "JOHN BAUTISTA",
+      "stato": "NUOVO"
     },
     {
       "id": "6",

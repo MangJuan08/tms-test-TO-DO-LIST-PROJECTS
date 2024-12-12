@@ -1,8 +1,9 @@
 <mat-dialog-content class="mat-typography">
     <h1>ADD NEW PROJECT</h1>
     <br>
-    <form [formGroup]="newProject">
+    <form [formGroup]="editProject">
       <div class="row">
+        
         <mat-form-field appearance="outline">
           <mat-label>TITLE</mat-label>
           <input matInput placeholder="Placeholder" id="title" formControlName="title" matInput>
@@ -19,10 +20,14 @@
             <input matInput placeholder="Placeholder" id="user" formControlName="user"
               matInput>
           </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>STATO</mat-label>
+            <input matInput placeholder="Placeholder" id="stato" formControlName="stato"
+              matInput>
+          </mat-form-field>
       </div>
     </form>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
-    <button mat-button [mat-dialog-close] (click)="addNewProject(newProject)">ADD TABLE</button>
+    <button mat-button [mat-dialog-close] (click)="edit(editProject)">EDIT PROJECT</button>
   </mat-dialog-actions>
-

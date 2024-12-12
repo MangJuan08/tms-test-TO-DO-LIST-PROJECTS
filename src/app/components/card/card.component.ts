@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { DialogEditProjectdComponent } from '../dialog-edit-projectd/dialog-edit-projectd.component';
+import { DialogEditProjectComponent } from '../dialog-edit-project/dialog-edit-project.component';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -27,13 +27,14 @@ this.deleteProject.emit(id)
 }
 
 openDialog(project:any) {
-  let dialogRef = this.dialog.open(DialogEditProjectdComponent, {
+  let dialogRef = this.dialog.open(DialogEditProjectComponent, {
     width: '500px',
     data: { id: project.id, description: project.description, stato: project.stato, user: project.user, title: project.title }
   });
 
   dialogRef.afterClosed().subscribe(result => {
     let editedProject = {
+      id: result.value.id,
       title: result.value.title,
       description: result.value.description,
       user: result.value.user,
