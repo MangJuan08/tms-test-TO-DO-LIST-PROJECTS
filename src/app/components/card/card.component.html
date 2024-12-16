@@ -1,7 +1,7 @@
 <mat-card appearance="outlined" class="border-card">
     <mat-card-header>
         <mat-card-title> {{projects.title}}</mat-card-title>
-        <mat-card-subtitle>Herding group</mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}}</mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
