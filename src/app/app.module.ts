@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TmsHomeTestComponent } from './pages/tms-home-test/tms-home-test.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
 import { MaterialModule } from './material-module.module';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,7 +18,6 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     AppComponent,
     TmsHomeTestComponent,
-    ProjectsComponent,
     CardComponent,
     DialogAddProjectComponent,
     DialogEditProjectComponent
