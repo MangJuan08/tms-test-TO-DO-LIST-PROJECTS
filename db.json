@@ -20,16 +20,14 @@
       "title": "COMPLETATO",
       "description": "description",
       "user": "JOHN BAUTISTA",
-      "stato": "COMPLETATO",
-      "priorita": "MEDIA"
+      "stato": "COMPLETATO"
     },
     {
       "id": "4",
       "title": "PROGRESS",
       "description": "description",
-      "stato": "PROGRESS",
       "user": "JOHN BAUTISTA",
-      "priorita": "ALTA"
+      "stato": "COMPLETATO"
     },
     {
       "id": "1778",
@@ -45,15 +43,23 @@
       "description": "lol",
       "user": "Juan Pogi",
       "stato": "NUOVO",
-      "priorita": "ALTA"
+      "priorita": "MEDIA"
     },
     {
       "id": "22bd",
       "title": "PROJECT X",
       "description": "a",
       "user": "John Pogi",
+      "stato": "PROGRESS",
+      "priorita": "MEDIA"
+    },
+    {
+      "id": "1895",
+      "title": "BASSA PRIORITA",
+      "description": "",
+      "user": "Johnny Bravo",
       "stato": "NUOVO",
-      "priorita": "ALTA"
+      "priorita": "BASSA"
     }
   ]
 }

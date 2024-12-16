@@ -11,11 +11,19 @@
   }
 
   .border-low-priority {
-    border-left: 5px solid blue;
+    border-left: 5px solid green;
+  }
+
+  .border-med-priority {
+    border-left: 5px solid greenyellow;
   }
 
   .border-high-priority {
     border-left: 5px solid red;
+  }
+
+  .border-completed-task {
+    border-left: 5px solid blue;
   }
 
 
