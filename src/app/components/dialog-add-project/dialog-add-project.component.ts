@@ -8,7 +8,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrl: './dialog-add-project.component.scss'
 })
 export class DialogAddProjectComponent {
-
+  priorita: any;
   newProject: any;
   constructor(public dialogRef: MatDialogRef<DialogAddProjectComponent>,
   @Inject(MAT_DIALOG_DATA) public data: any) {
@@ -16,7 +16,14 @@ export class DialogAddProjectComponent {
       title: new FormControl(""),
       description: new FormControl(""),
       user: new FormControl(""),
+      priorita: new FormControl("")
     });
+
+    this.priorita = [
+      { value: 'BASSA' },
+      { value: 'MEDIA', },
+      { value: 'ALTA' }];
+  
   }
 
   addNewProject(project:any): void {

@@ -28,6 +28,15 @@
               }
             </mat-select>
           </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="priorita" id="priorita" matInput>
+              @for (stat of priorita; track stat) {
+                <mat-option [value]="stat.value">{{stat.value}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
       </div>
     </form>
   </mat-dialog-content>

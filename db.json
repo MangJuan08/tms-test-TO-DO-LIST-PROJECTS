@@ -5,49 +5,55 @@
       "title": "Launch a new project",
       "description": "description",
       "user": "JOHN CENA",
-      "stato": "PROGRESS"
+      "stato": "PROGRESS",
+      "priorita": "ALTA"
     },
     {
       "id": "2",
-      "title": "NUOVO",
+      "title": "NEW",
       "description": "description",
       "user": "JOHN BAUTISTAS",
-      "stato": "NUOVO"
+      "stato": "COMPLETATO"
     },
     {
       "id": "3",
       "title": "COMPLETATO",
       "description": "description",
       "user": "JOHN BAUTISTA",
-      "stato": "COMPLETATO"
+      "stato": "COMPLETATO",
+      "priorita": "MEDIA"
     },
     {
       "id": "4",
       "title": "PROGRESS",
       "description": "description",
       "stato": "PROGRESS",
-      "user": "JOHN BAUTISTA"
+      "user": "JOHN BAUTISTA",
+      "priorita": "ALTA"
     },
     {
-      "id": "6",
-      "title": "COMPLETATO",
+      "id": "1778",
+      "title": "NEW PROJECT",
       "description": "description",
-      "stato": "COMPLETATO",
-      "user": "JOHN BAUTISTA"
+      "user": "John Pogi",
+      "stato": "NUOVO",
+      "priorita": "MEDIA"
     },
     {
-      "id": "7",
-      "title": "COMPLETATO",
-      "description": "description",
-      "stato": "COMPLETATO",
-      "user": "JOHN BAUTISTA"
-    },
-    {
-      "id": "eaaf",
+      "id": "6b77",
       "title": "NUOVO",
+      "description": "lol",
+      "user": "Juan Pogi",
+      "stato": "NUOVO",
+      "priorita": "ALTA"
+    },
+    {
+      "id": "22bd",
+      "title": "PROJECT X",
       "description": "a",
-      "user": "J K",
-      "stato": "NUOVO"
+      "user": "John Pogi",
+      "stato": "NUOVO",
+      "priorita": "ALTA"
     }
   ]
 }

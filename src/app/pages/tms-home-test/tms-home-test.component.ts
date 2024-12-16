@@ -17,7 +17,7 @@ export class TmsHomeTestComponent {
   newProjects: any;
   onProgressProjects: any;
   completeProjects: any;
-  newProjectLength:any;
+  newProjectLength: any;
   onProgressProjectLength: any;
   completeProjectLength: any;
   quantityNewProjects$: any;
@@ -33,7 +33,7 @@ export class TmsHomeTestComponent {
       })
 
       this.projectService.newProjectsQuantity.next(this.newProjects.length);
-   
+
 
       this.onProgressProjects = res.filter((item: any) => {
         return item.stato == "PROGRESS"
@@ -46,7 +46,7 @@ export class TmsHomeTestComponent {
       })
 
       this.projectService.completeProjectQuantity.next(this.completeProjects.length);
-   
+
     })
 
     this.quantityNewProjects$ = this.projectService.newProjectsQuantity.subscribe((res) => {
@@ -95,34 +95,45 @@ export class TmsHomeTestComponent {
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log(result)
-      if(result !== 'undefined') {
+      if (result !== 'undefined') {
         let newProject = {
           title: result.value.title,
           description: result.value.description,
           user: result.value.user,
-          stato: "NUOVO"
+          stato: "NUOVO",
+          priorita: result.value.priorita
         }
         this.addNewProject(newProject);
       }
     });
   }
 
-  addNewProject(result:any) {
+  addNewProject(result: any) {
     this.projectService.addNewProject(result).subscribe((res: any) => {
       this.toastr.success('PROJECT ADDED COMPLETELY');
       this.reloadProjects();
     });
   }
 
-  editProject(result:any) {
+  editProject(result: any) {
     console.log(result)
-    this.projectService.editProject(result).subscribe((res: any) => {
-      this.toastr.success('PROJECT MODIFIED COMPLETELY');
-      this.reloadProjects();
-    });
+    if (result.stato == 'COMPLETATO') {
+      delete result["priorita"];
+      this.projectService.editProject(result).subscribe((res: any) => {
+        this.toastr.success('PROJECT MODIFIED COMPLETELY');
+        this.reloadProjects();
+      });
+    }
+    else {
+      this.projectService.editProject(result).subscribe((res: any) => {
+        this.toastr.success('PROJECT MODIFIED COMPLETELY');
+        this.reloadProjects();
+      });
+    }
+
     console.log(result)
   }
-  
+
   reloadProjects() {
     this.newProjects = [];
     this.completeProjects = [];
@@ -144,12 +155,12 @@ export class TmsHomeTestComponent {
         this.newProjectLength = res;
         console.log(res)
       })
-  
+
       this.quantityOnProgressProjects$ = this.projectService.onProgressProjectQuantity.subscribe((res) => {
         this.onProgressProjectLength = res;
         console.log(res)
       })
-  
+
       this.quantityCompleteProjects$ = this.projectService.completeProjectQuantity.subscribe((res) => {
         this.completeProjectLength = res;
         console.log(res)
