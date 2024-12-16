@@ -35,7 +35,7 @@
       "description": "description",
       "user": "John Pogi",
       "stato": "NUOVO",
-      "priorita": "MEDIA"
+      "priorita": "ALTA"
     },
     {
       "id": "6b77",
@@ -56,7 +56,7 @@
     {
       "id": "1895",
       "title": "BASSA PRIORITA",
-      "description": "",
+      "description": "bassa priorita",
       "user": "Johnny Bravo",
       "stato": "NUOVO",
       "priorita": "BASSA"
