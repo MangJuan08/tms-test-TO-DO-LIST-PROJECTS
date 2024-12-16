@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Projects } from '../model/projects.model';
 
 @Injectable({
@@ -8,6 +8,9 @@ import { Projects } from '../model/projects.model';
 })
 export class ProjectsService {
 
+  newProjectsQuantity = new Subject<any>();
+  onProgressProjectQuantity = new Subject<any>();
+  completeProjectQuantity = new Subject<any>();
   constructor(private http:HttpClient) { }
 
   getAllProjects(): Observable<Projects[]> {

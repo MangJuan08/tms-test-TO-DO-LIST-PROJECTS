@@ -10,6 +10,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class DialogEditProjectComponent {
   editProject: any;
+  statusProject:any
   constructor(public dialogRef: MatDialogRef<DialogEditProjectComponent>,
   @Inject(MAT_DIALOG_DATA) public data: any) {
     this.editProject = new FormGroup({
@@ -19,6 +20,11 @@ export class DialogEditProjectComponent {
       user: new FormControl(this.data.user),
       stato: new FormControl(this.data.stato),
     });
+
+    this.statusProject = [
+      { value: 'NUOVO' },
+      { value: 'PROGRESS', },
+      { value: 'COMPLETATO' }];
   }
 
   ngOnInit() {

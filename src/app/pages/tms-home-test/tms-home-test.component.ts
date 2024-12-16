@@ -4,6 +4,7 @@ import { Projects } from '../../model/projects.model';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddProjectComponent } from '../../components/dialog-add-project/dialog-add-project.component';
 import { ToastrService } from 'ngx-toastr';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tms-home-test',
@@ -16,24 +17,51 @@ export class TmsHomeTestComponent {
   newProjects: any;
   onProgressProjects: any;
   completeProjects: any;
+  newProjectLength:any;
+  onProgressProjectLength: any;
+  completeProjectLength: any;
+  quantityNewProjects$: any;
+  quantityOnProgressProjects$: any;
+  quantityCompleteProjects$: any;
   constructor(private projectService: ProjectsService, public dialog: MatDialog, private toastr: ToastrService) {
     this.isLoading = true;
 
     this.projectService.getAllProjects().subscribe((res: Projects[]) => {
+
       this.newProjects = res.filter((item: any) => {
         return item.stato == "NUOVO"
       })
+
+      this.projectService.newProjectsQuantity.next(this.newProjects.length);
+   
 
       this.onProgressProjects = res.filter((item: any) => {
         return item.stato == "PROGRESS"
       })
 
+      this.projectService.onProgressProjectQuantity.next(this.onProgressProjects.length);
+
       this.completeProjects = res.filter((item: any) => {
         return item.stato == "COMPLETATO"
       })
-      console.log(this.newProjects)
-      console.log(this.onProgressProjects)
-      console.log(this.completeProjects)
+
+      this.projectService.completeProjectQuantity.next(this.completeProjects.length);
+   
+    })
+
+    this.quantityNewProjects$ = this.projectService.newProjectsQuantity.subscribe((res) => {
+      this.newProjectLength = res;
+      console.log(res)
+    })
+
+    this.quantityOnProgressProjects$ = this.projectService.onProgressProjectQuantity.subscribe((res) => {
+      this.onProgressProjectLength = res;
+      console.log(res)
+    })
+
+    this.quantityCompleteProjects$ = this.projectService.completeProjectQuantity.subscribe((res) => {
+      this.completeProjectLength = res;
+      console.log(res)
     })
     setTimeout(() => {
       this.isLoading = false;
@@ -111,9 +139,21 @@ export class TmsHomeTestComponent {
       this.completeProjects = res.filter((item: any) => {
         return item.stato == "COMPLETATO"
       })
-      console.log(this.newProjects)
-      console.log(this.onProgressProjects)
-      console.log(this.completeProjects)
+
+      this.quantityNewProjects$ = this.projectService.newProjectsQuantity.subscribe((res) => {
+        this.newProjectLength = res;
+        console.log(res)
+      })
+  
+      this.quantityOnProgressProjects$ = this.projectService.onProgressProjectQuantity.subscribe((res) => {
+        this.onProgressProjectLength = res;
+        console.log(res)
+      })
+  
+      this.quantityCompleteProjects$ = this.projectService.completeProjectQuantity.subscribe((res) => {
+        this.completeProjectLength = res;
+        console.log(res)
+      })
     })
   }
 }

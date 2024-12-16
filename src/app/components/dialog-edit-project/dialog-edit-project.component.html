@@ -21,9 +21,12 @@
               matInput>
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <mat-label>STATO</mat-label>
-            <input matInput placeholder="Placeholder" id="stato" formControlName="stato"
-              matInput>
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="stato"   id="stato" matInput>
+              @for (stat of statusProject; track stat) {
+                <mat-option [value]="stat.value">{{stat.value}}</mat-option>
+              }
+            </mat-select>
           </mat-form-field>
       </div>
     </form>
