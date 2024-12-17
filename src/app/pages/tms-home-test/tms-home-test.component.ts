@@ -143,45 +143,33 @@ export class TmsHomeTestComponent {
       this.newProjects = res.filter((item: any) => {
         return item.stato == "NUOVO"
       })
-
       this.projectService.newProjectsQuantity.next(this.newProjects.length);
-
 
       this.onProgressProjects = res.filter((item: any) => {
         return item.stato == "PROGRESS"
       })
-
       this.projectService.onProgressProjectQuantity.next(this.onProgressProjects.length);
 
       this.completeProjects = res.filter((item: any) => {
         return item.stato == "COMPLETATO"
       })
-
       this.projectService.completeProjectQuantity.next(this.completeProjects.length);
-
-
     })
 
     this.getLength();
-   
   }
 
   getLength() {
     this.quantityNewProjects$ = this.projectService.newProjectsQuantity.subscribe((res) => {
-      console.log(res)
       this.newProjectLength = res;
-     
     })
-    console.log(this.newProjectLength)
 
     this.quantityOnProgressProjects$ = this.projectService.onProgressProjectQuantity.subscribe((res) => {
       this.onProgressProjectLength = res;
-      console.log(res)
     })
 
     this.quantityCompleteProjects$ = this.projectService.completeProjectQuantity.subscribe((res) => {
       this.completeProjectLength = res;
-      console.log(res)
     })
   }
 }
