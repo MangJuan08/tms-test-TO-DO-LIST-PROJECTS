@@ -24,19 +24,19 @@
     },
     {
       "id": "3bb0",
-      "title": "a",
-      "description": "a",
+      "title": "Nuovo Progetto 1.0",
+      "description": "Angular",
       "user": "JOHN BAUTISTA",
       "stato": "NUOVO",
       "priorita": "MEDIA"
     },
     {
       "id": "9384",
-      "title": "a",
-      "description": "a",
+      "title": "Progetto Scolastico",
+      "description": "Prova",
       "user": "JOHN BAUTISTA",
       "stato": "NUOVO",
-      "priorita": "BASSA"
+      "priorita": "ALTA"
     }
   ]
 }
