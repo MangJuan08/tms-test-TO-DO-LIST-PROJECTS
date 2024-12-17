@@ -110,7 +110,7 @@ export class TmsHomeTestComponent {
 
   addNewProject(result: any) {
     this.projectService.addNewProject(result).subscribe((res: any) => {
-      this.toastr.success('PROJECT ADDED COMPLETELY');
+      this.toastr.success('TASK ADDED COMPLETELY');
       this.reloadProjects();
     });
   }
@@ -120,13 +120,13 @@ export class TmsHomeTestComponent {
     if (result.stato == 'COMPLETATO') {
       delete result["priorita"];
       this.projectService.editProject(result).subscribe((res: any) => {
-        this.toastr.success('PROJECT MODIFIED COMPLETELY');
+        this.toastr.success('TASK MODIFIED COMPLETELY');
         this.reloadProjects();
       });
     }
     else {
       this.projectService.editProject(result).subscribe((res: any) => {
-        this.toastr.success('PROJECT MODIFIED COMPLETELY');
+        this.toastr.success('TASK MODIFIED COMPLETELY');
         this.reloadProjects();
       });
     }

@@ -6,7 +6,7 @@
       "description": "description",
       "user": "JOHN CENA",
       "stato": "PROGRESS",
-      "priorita": "ALTA"
+      "priorita": "MEDIA"
     },
     {
       "id": "2",
@@ -36,14 +36,6 @@
       "user": "John Pogi",
       "stato": "NUOVO",
       "priorita": "ALTA"
-    },
-    {
-      "id": "6b77",
-      "title": "NUOVO",
-      "description": "lol",
-      "user": "Juan Pogi",
-      "stato": "NUOVO",
-      "priorita": "MEDIA"
     },
     {
       "id": "22bd",
