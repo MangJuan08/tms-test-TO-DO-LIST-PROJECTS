@@ -1,5 +1,5 @@
 <div class="container">
-    <br><br><br>
+    <br>
     <ngx-skeleton-loader count="7" *ngIf="isLoading" appearance="line" animation="pulse"></ngx-skeleton-loader>
     <div class="row" *ngIf="!isLoading">
       <div class="col-md-9">
@@ -11,7 +11,7 @@
             </ul>
       </div>
     </div>
-    <br><br>
+    <br>
     <div class="row" *ngIf="!isLoading">
         <div class="row">
             <div class="col-md-4">
@@ -25,7 +25,7 @@
                 
                     <button (click)="openDialog()" mat-icon-button><mat-icon>add</mat-icon></button>
                   </mat-expansion-panel>
-                <br><br>
+                <br>
                 <div *ngFor="let i of newProjects; let num = index">
                     <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="newProjects.length" (editProject)="editProject($event)"></app-card>
                     <br>
@@ -42,7 +42,7 @@
                 
                     <button (click)="openDialog()" mat-icon-button><mat-icon>add</mat-icon></button>
                   </mat-expansion-panel>
-                <br><br>
+                <br>
                 <div *ngFor="let i of onProgressProjects; let num = index">
                     <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="onProgressProjects.length" (editProject)="editProject($event)"></app-card>
                     <br>
@@ -55,11 +55,10 @@
                 <mat-expansion-panel>
                     <mat-expansion-panel-header>
                       <mat-panel-title> ACTIONS </mat-panel-title>
-                    </mat-expansion-panel-header>
-                
+                    </mat-expansion-panel-header>            
                     <button (click)="openDialog()" mat-icon-button><mat-icon>add</mat-icon></button>
                   </mat-expansion-panel>
-                <br><br>
+                <br>
                 <div *ngFor="let i of completeProjects; let num = index">
                     <app-card [projects]="i" [num]="num" (deleteProject)="deleteProject($event)" [totalLength]="completeProjects.length" (editProject)="editProject($event)"></app-card>
                     <br>

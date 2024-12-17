@@ -111,6 +111,7 @@ export class TmsHomeTestComponent {
   addNewProject(result: any) {
     this.projectService.addNewProject(result).subscribe((res: any) => {
       this.toastr.success('TASK ADDED COMPLETELY');
+      console.log(res)
       this.reloadProjects();
     });
   }
@@ -143,28 +144,44 @@ export class TmsHomeTestComponent {
         return item.stato == "NUOVO"
       })
 
+      this.projectService.newProjectsQuantity.next(this.newProjects.length);
+
+
       this.onProgressProjects = res.filter((item: any) => {
         return item.stato == "PROGRESS"
       })
+
+      this.projectService.onProgressProjectQuantity.next(this.onProgressProjects.length);
 
       this.completeProjects = res.filter((item: any) => {
         return item.stato == "COMPLETATO"
       })
 
-      this.quantityNewProjects$ = this.projectService.newProjectsQuantity.subscribe((res) => {
-        this.newProjectLength = res;
-        console.log(res)
-      })
+      this.projectService.completeProjectQuantity.next(this.completeProjects.length);
 
-      this.quantityOnProgressProjects$ = this.projectService.onProgressProjectQuantity.subscribe((res) => {
-        this.onProgressProjectLength = res;
-        console.log(res)
-      })
 
-      this.quantityCompleteProjects$ = this.projectService.completeProjectQuantity.subscribe((res) => {
-        this.completeProjectLength = res;
-        console.log(res)
-      })
+    })
+
+    this.getLength();
+   
+  }
+
+  getLength() {
+    this.quantityNewProjects$ = this.projectService.newProjectsQuantity.subscribe((res) => {
+      console.log(res)
+      this.newProjectLength = res;
+     
+    })
+    console.log(this.newProjectLength)
+
+    this.quantityOnProgressProjects$ = this.projectService.onProgressProjectQuantity.subscribe((res) => {
+      this.onProgressProjectLength = res;
+      console.log(res)
+    })
+
+    this.quantityCompleteProjects$ = this.projectService.completeProjectQuantity.subscribe((res) => {
+      this.completeProjectLength = res;
+      console.log(res)
     })
   }
 }

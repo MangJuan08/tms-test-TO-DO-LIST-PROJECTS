@@ -23,43 +23,20 @@
       "stato": "COMPLETATO"
     },
     {
-      "id": "4",
-      "title": "PROGRESS",
-      "description": "description",
-      "user": "JOHN BAUTISTA",
-      "stato": "COMPLETATO"
-    },
-    {
-      "id": "1778",
-      "title": "NEW PROJECT",
-      "description": "description",
-      "user": "John Pogi",
-      "stato": "NUOVO",
-      "priorita": "ALTA"
-    },
-    {
-      "id": "22bd",
-      "title": "PROJECT X",
+      "id": "3bb0",
+      "title": "a",
       "description": "a",
-      "user": "John Pogi",
-      "stato": "PROGRESS",
+      "user": "JOHN BAUTISTA",
+      "stato": "NUOVO",
       "priorita": "MEDIA"
     },
     {
-      "id": "1895",
-      "title": "BASSA PRIORITA",
-      "description": "bassa priorita",
-      "user": "Johnny Bravo",
+      "id": "9384",
+      "title": "a",
+      "description": "a",
+      "user": "JOHN BAUTISTA",
       "stato": "NUOVO",
       "priorita": "BASSA"
-    },
-    {
-      "id": "180b",
-      "title": "Project",
-      "description": "New Project",
-      "user": "Mica Angelyn",
-      "stato": "NUOVO",
-      "priorita": "ALTA"
     }
   ]
 }
