@@ -3,5 +3,5 @@ export interface Projects {
    title: String, 
    description: String, 
    stato: String, 
-   user: String
+   utente: String
 }

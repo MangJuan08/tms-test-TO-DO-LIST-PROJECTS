@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Launch a new project",
       "description": "description",
-      "user": "Mica Angelyn",
+      "utente": "Mica Angelyn",
       "stato": "PROGRESS",
       "priorita": "MEDIA"
     },
@@ -12,21 +12,21 @@
       "id": "2",
       "title": "NEW",
       "description": "description",
-      "user": "JOHN BAUTISTAS",
+      "utente": "JOHN BAUTISTAS",
       "stato": "COMPLETATO"
     },
     {
       "id": "3",
       "title": "COMPLETATO",
       "description": "description",
-      "user": "JOHN BAUTISTA",
+      "utente": "JOHN BAUTISTA",
       "stato": "COMPLETATO"
     },
     {
       "id": "3bb0",
       "title": "Nuovo Progetto 1.0",
       "description": "Angular",
-      "user": "JOHN BAUTISTA",
+      "utente": "JOHN BAUTISTA",
       "stato": "NUOVO",
       "priorita": "MEDIA"
     },
@@ -34,9 +34,17 @@
       "id": "9384",
       "title": "Progetto Scolastico",
       "description": "Prova",
-      "user": "JOHN BAUTISTA",
+      "utente": "JOHN BAUTISTA",
       "stato": "NUOVO",
       "priorita": "ALTA"
+    },
+    {
+      "id": "d879",
+      "title": "Nuovo Progetto TIAS0",
+      "description": "prova",
+      "utente": "John Edward",
+      "stato": "NUOVO",
+      "priorita": "BASSA"
     }
   ]
 }

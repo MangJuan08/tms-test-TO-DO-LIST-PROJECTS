@@ -15,7 +15,7 @@ export class DialogAddProjectComponent {
     this.newProject = new FormGroup({
       title: new FormControl(""),
       description: new FormControl(""),
-      user: new FormControl(""),
+      utente: new FormControl(""),
       priorita: new FormControl("")
     });
 

@@ -99,7 +99,7 @@ export class TmsHomeTestComponent {
         let newProject = {
           title: result.value.title,
           description: result.value.description,
-          user: result.value.user,
+          utente: result.value.utente,
           stato: "NUOVO",
           priorita: result.value.priorita
         }

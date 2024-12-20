@@ -29,7 +29,7 @@ this.deleteProject.emit(id)
 openDialog(project:any) {
   let dialogRef = this.dialog.open(DialogEditProjectComponent, {
     width: '500px',
-    data: { id: project.id, description: project.description, stato: project.stato, user: project.user, title: project.title, priorita: project.priorita }
+    data: { id: project.id, description: project.description, stato: project.stato, utente: project.utente, title: project.title, priorita: project.priorita }
   });
 
   dialogRef.afterClosed().subscribe(result => {
@@ -38,7 +38,7 @@ openDialog(project:any) {
       id: result.value.id,
       title: result.value.title,
       description: result.value.description,
-      user: result.value.user,
+      utente: result.value.utente,
       stato: result.value.stato,
       priorita: result.value.priorita
     }

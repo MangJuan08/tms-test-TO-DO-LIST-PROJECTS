@@ -18,7 +18,7 @@ export class DialogEditProjectComponent {
       id: new FormControl(this.data.id),
       title: new FormControl(this.data.title),
       description: new FormControl(this.data.description),
-      user: new FormControl(this.data.user),
+      utente: new FormControl(this.data.utente),
       stato: new FormControl(this.data.stato),
       priorita: new FormControl(this.data.priorita),
     });
