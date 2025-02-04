@@ -23,28 +23,12 @@
       "stato": "COMPLETATO"
     },
     {
-      "id": "3bb0",
-      "title": "Nuovo Progetto 1.0",
-      "description": "Angular",
-      "utente": "JOHN BAUTISTA",
-      "stato": "NUOVO",
-      "priorita": "MEDIA"
-    },
-    {
-      "id": "9384",
-      "title": "Progetto Scolastico",
-      "description": "Prova",
-      "utente": "JOHN BAUTISTA",
-      "stato": "NUOVO",
-      "priorita": "ALTA"
-    },
-    {
-      "id": "d879",
-      "title": "Nuovo Progetto TIAS0",
-      "description": "prova",
+      "id": "47b2",
+      "title": "TASK 1.0",
+      "description": "Creazione della tabella",
       "utente": "John Edward",
       "stato": "NUOVO",
-      "priorita": "BASSA"
+      "priorita": "ALTA"
     }
   ]
 }

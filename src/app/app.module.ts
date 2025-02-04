@@ -13,6 +13,8 @@ import { DialogAddProjectComponent } from './components/dialog-add-project/dialo
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogEditProjectComponent } from './components/dialog-edit-project/dialog-edit-project.component';
 import { ToastrModule } from 'ngx-toastr';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { CalendarTasksComponent } from './pages/calendar-tasks/calendar-tasks.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ToastrModule } from 'ngx-toastr';
     TmsHomeTestComponent,
     CardComponent,
     DialogAddProjectComponent,
-    DialogEditProjectComponent
+    DialogEditProjectComponent,
+    CalendarTasksComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
     MaterialModule,
     NgxSkeletonLoaderModule,
     ReactiveFormsModule,
+    FullCalendarModule,
     ToastrModule.forRoot()
   ],
   providers: [provideHttpClient()],
