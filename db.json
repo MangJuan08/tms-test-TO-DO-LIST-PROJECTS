@@ -6,21 +6,24 @@
       "description": "description",
       "utente": "Mica Angelyn",
       "stato": "PROGRESS",
-      "priorita": "MEDIA"
+      "priorita": "MEDIA",
+      "date": "2025-02-04"
     },
     {
       "id": "2",
       "title": "NEW",
       "description": "description",
       "utente": "JOHN BAUTISTAS",
-      "stato": "COMPLETATO"
+      "stato": "COMPLETATO",
+      "date": "2025-02-05"
     },
     {
       "id": "3",
       "title": "COMPLETATO",
       "description": "description",
       "utente": "JOHN BAUTISTA",
-      "stato": "COMPLETATO"
+      "stato": "COMPLETATO",
+      "date": "2025-02-04"
     },
     {
       "id": "47b2",
@@ -28,7 +31,8 @@
       "description": "Creazione della tabella",
       "utente": "John Edward",
       "stato": "NUOVO",
-      "priorita": "ALTA"
+      "priorita": "ALTA",
+      "date": "2025-02-04"
     },
     {
       "id": "e638",
@@ -36,7 +40,8 @@
       "description": "123",
       "utente": "juan pogi",
       "stato": "NUOVO",
-      "priorita": "MEDIA"
+      "priorita": "MEDIA",
+      "date": "2025-02-04"
     }
   ]
 }

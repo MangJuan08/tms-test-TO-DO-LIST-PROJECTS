@@ -4,7 +4,9 @@
         <mat-card-title> {{projects.title}}
             <mat-icon>priority_high</mat-icon>
         </mat-card-title>
-        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b></mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b>
+            <br>
+            {{projects.date}} </mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
@@ -32,7 +34,9 @@
     <mat-card-header>
         <mat-card-title> {{projects.title}}
         </mat-card-title>
-        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b></mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b>
+            <br>
+            {{projects.date}} </mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
@@ -60,7 +64,9 @@
     <mat-card-header>
         <mat-card-title> {{projects.title}}
         </mat-card-title>
-        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b></mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b>
+            <br>
+            {{projects.date}} </mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
@@ -89,7 +95,10 @@
     <mat-card-header>
         <mat-card-title> {{projects.title}}
         </mat-card-title>
-        <mat-card-subtitle>{{projects.description}} </mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} 
+            <br>
+            {{projects.date}} 
+        </mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel

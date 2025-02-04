@@ -3,6 +3,7 @@ import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { ProjectsService } from '../../services/projects.service';
 import { Projects } from '../../model/projects.model';
+import interactionPlugin from '@fullcalendar/interaction';
 
 @Component({
   selector: 'app-calendar-tasks',
@@ -12,43 +13,47 @@ import { Projects } from '../../model/projects.model';
 export class CalendarTasksComponent {
   isLoading: any;
   public calendarOptions: any;
+  public taskEvents: any;
   constructor(private projectService: ProjectsService) {
     this.isLoading = true;
-    this.calendarOptions = {
-      initialView: 'dayGridMonth',
-      plugins: [dayGridPlugin]
-    };
 
+    this.projectService.getAllProjects().subscribe((res: any) => {
 
-    this.projectService.getAllProjects().subscribe((res: Projects[]) => {
-      /*
-            this.newProjects = res.filter((item: any) => {
-              return item.stato == "NUOVO"
-            })
-      
-            this.projectService.newProjectsQuantity.next(this.newProjects.length);
-      
-      
-            this.onProgressProjects = res.filter((item: any) => {
-              return item.stato == "PROGRESS"
-            })
-      
-            this.projectService.onProgressProjectQuantity.next(this.onProgressProjects.length);
-      
-            this.completeProjects = res.filter((item: any) => {
-              return item.stato == "COMPLETATO"
-            })
-      
-            this.projectService.completeProjectQuantity.next(this.completeProjects.length);
-      */
-
+      this.taskEvents = res
       console.log(res)
+ 
+      this.taskEvents = res.filter((item: any) => {
+        return item.date && item.title
+      })
+      this.initializeCalendar(this.taskEvents);
     })
+    
+   
 
     setTimeout(() => {
       this.isLoading = false;
     }, 3000)
 
+  }
+
+  ngOnInit() {
+  
+  
+  }
+
+
+  initializeCalendar(tasks:any) {
+    this.calendarOptions = {
+      initialView: 'dayGridMonth',
+      weekends: false,
+      plugins: [dayGridPlugin, interactionPlugin],
+      events: tasks,
+      dateClick: (arg: any) => this.handleDateClick(arg)
+    }; 
+  }
+
+  handleDateClick(arg:any) {
+    alert('date click! ' + arg.dateStr);
   }
 
 }
