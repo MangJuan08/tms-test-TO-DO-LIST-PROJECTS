@@ -28,6 +28,13 @@
               }
             </mat-select>
           </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Different locale</mat-label>
+            <input matInput [matDatepicker]="dp" formControlName="date"/>
+            <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp></mat-datepicker>
+          </mat-form-field>
       </div>
     </form>
   </mat-dialog-content>
