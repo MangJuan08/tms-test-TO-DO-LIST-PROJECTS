@@ -1,10 +1,10 @@
 @if(projects.priorita=='ALTA') {
-<mat-card appearance="outlined" class="border-high-priority">
+<mat-card appearance="outlined">
     <mat-card-header>
-        <mat-card-title class="colorTitle"> {{projects.title}}
+        <mat-card-title> {{projects.title}}
             <mat-icon>priority_high</mat-icon>
         </mat-card-title>
-        <mat-card-subtitle class="colorTitle">{{projects.description}}</mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b></mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
@@ -28,11 +28,11 @@
 <mat-divider></mat-divider>
 }
 @else if(projects.priorita=='MEDIA') {
-<mat-card appearance="outlined" class="border-med-priority">
+<mat-card appearance="outlined">
     <mat-card-header>
-        <mat-card-title class="colorTitle"> {{projects.title}}
+        <mat-card-title> {{projects.title}}
         </mat-card-title>
-        <mat-card-subtitle class="colorTitle">{{projects.description}}</mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b></mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
@@ -56,11 +56,11 @@
 <mat-divider></mat-divider>
 }
 @else if(projects.priorita=='BASSA'){
-<mat-card appearance="outlined" class="border-low-priority">
+<mat-card appearance="outlined">
     <mat-card-header>
-        <mat-card-title class="colorTitle"> {{projects.title}}
+        <mat-card-title> {{projects.title}}
         </mat-card-title>
-        <mat-card-subtitle>{{projects.description}}</mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} <b>PRIORITA: {{projects.priorita}}</b></mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
@@ -85,11 +85,11 @@
 }
 
 @else if(projects.stato=='COMPLETATO'){
-<mat-card appearance="outlined" class="border-completed-task">
+<mat-card appearance="outlined">
     <mat-card-header>
-        <mat-card-title class="colorTitle"> {{projects.title}}
+        <mat-card-title> {{projects.title}}
         </mat-card-title>
-        <mat-card-subtitle class="colorTitle">{{projects.description}}</mat-card-subtitle>
+        <mat-card-subtitle>{{projects.description}} </mat-card-subtitle>
         <button mat-icon-button class="close" (click)="deleteProjectR(projects.id)">
             <mat-icon>
                 cancel
@@ -107,7 +107,7 @@
             @else {
             <mat-chip> <button (click)="openDialog(projects)" mat-icon-button dis> <mat-icon>
                         edit
-            </mat-icon></button></mat-chip>
+                    </mat-icon></button></mat-chip>
             }
         </mat-chip-set>
         <button mat-icon-button class="listNumber" disabled>

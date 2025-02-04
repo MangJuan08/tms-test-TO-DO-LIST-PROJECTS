@@ -1,5 +1,5 @@
 <div class="container">
     <h1>CALENDARIO</h1>
-
-    <full-calendar [options]="calendarOptions"></full-calendar>
+    <ngx-skeleton-loader count="7" *ngIf="isLoading" appearance="line" animation="pulse"></ngx-skeleton-loader>
+    <div *ngIf="!isLoading"><full-calendar [options]="calendarOptions"></full-calendar></div>
 </div>

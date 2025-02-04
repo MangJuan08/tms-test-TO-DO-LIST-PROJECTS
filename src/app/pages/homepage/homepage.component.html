@@ -1,16 +1,6 @@
 <div class="container">
     <br>
     <ngx-skeleton-loader count="7" *ngIf="isLoading" appearance="line" animation="pulse"></ngx-skeleton-loader>
-    <div class="row" *ngIf="!isLoading">
-      <div class="col-md-9">
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item" style="color:red">° RED - PRIORITA ALTA</li>
-              <li class="list-group-item" style="color:yellowgreen">° YELLOW GREEN - PRIORITA MEDIA</li>
-              <li class="list-group-item" style="color:green">° GREEN - PRIORITA BASSA</li>
-              <li class="list-group-item" style="color:blue">° BLUE - TASK COMPLETATO</li>
-            </ul>
-      </div>
-    </div>
     <br>
     <div class="row" *ngIf="!isLoading">
         <div class="row">
