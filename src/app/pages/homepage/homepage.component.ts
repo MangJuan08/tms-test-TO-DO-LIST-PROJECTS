@@ -7,11 +7,11 @@ import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-tms-home-test',
-  templateUrl: './tms-home-test.component.html',
-  styleUrl: './tms-home-test.component.scss'
+  selector: 'app-homepage',
+  templateUrl: './homepage.component.html',
+  styleUrl: './homepage.component.scss'
 })
-export class TmsHomeTestComponent {
+export class HomepageComponent {
 
   isLoading: any;
   newProjects: any;

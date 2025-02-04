@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TmsHomeTestComponent } from './pages/tms-home-test/tms-home-test.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 import { MaterialModule } from './material-module.module';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,7 +19,7 @@ import { CalendarTasksComponent } from './pages/calendar-tasks/calendar-tasks.co
 @NgModule({
   declarations: [
     AppComponent,
-    TmsHomeTestComponent,
+    HomepageComponent,
     CardComponent,
     DialogAddProjectComponent,
     DialogEditProjectComponent,
