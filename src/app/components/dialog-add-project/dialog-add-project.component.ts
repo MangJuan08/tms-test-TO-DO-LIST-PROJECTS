@@ -1,8 +1,9 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, Inject, signal } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import {MomentDateAdapter, provideMomentDateAdapter} from '@angular/material-moment-adapter';
+import { MatDatepickerIntl } from '@angular/material/datepicker';
 
 const MY_DATE_FORMAT = {
   parse: {
@@ -26,6 +27,7 @@ const MY_DATE_FORMAT = {
 export class DialogAddProjectComponent {
   priorita: any;
   newProject: any;
+
   constructor(public dialogRef: MatDialogRef<DialogAddProjectComponent>,
   @Inject(MAT_DIALOG_DATA) public data: any) {
     this.newProject = new FormGroup({
@@ -33,7 +35,7 @@ export class DialogAddProjectComponent {
       description: new FormControl(""),
       utente: new FormControl(""),
       priorita: new FormControl(""),
-      date: new FormControl("")
+      date: new FormControl(MAT_DATE_LOCALE)
     });
 
     this.priorita = [
