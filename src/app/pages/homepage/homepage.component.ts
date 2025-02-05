@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogAddProjectComponent } from '../../components/dialog-add-project/dialog-add-project.component';
 import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
+import moment from 'moment';
 
 @Component({
   selector: 'app-homepage',
@@ -101,7 +102,8 @@ export class HomepageComponent {
           description: result.value.description,
           utente: result.value.utente,
           stato: "NUOVO",
-          priorita: result.value.priorita
+          priorita: result.value.priorita,
+          date:  moment(result.value.date).utc().format('YYYY-MM-DD')
         }
         this.addNewProject(newProject);
       }
