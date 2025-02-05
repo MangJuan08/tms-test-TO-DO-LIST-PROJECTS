@@ -13,7 +13,7 @@ const MY_DATE_FORMAT = {
     dateInput: 'YYYY/MM/DD', // this is how your date will be parsed from Input
   },
   display: {
-    dateInput: 'YYYY/MM/DD', // this is how your date will get displayed on the Input
+    dateInput: 'YYYY-MM-DD', // this is how your date will get displayed on the Input
     monthYearLabel: 'YYYY MMMM',
     dateA11yLabel: 'LL',
     monthYearA11yLabel: 'YYYY MMMM'
@@ -26,7 +26,6 @@ const MY_DATE_FORMAT = {
   templateUrl: './dialog-add-project.component.html',
   styleUrl: './dialog-add-project.component.scss',
   providers: [
-    { provide: MAT_DATE_LOCALE, useValue: "en-GB" },
     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
     { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMAT }
   ],
