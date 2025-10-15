@@ -45,7 +45,6 @@ export class CalendarTasksComponent {
   initializeCalendar(tasks:any) {
     this.calendarOptions = {
       initialView: 'dayGridMonth',
-      weekends: false,
       plugins: [dayGridPlugin, interactionPlugin],
       events: tasks,
       dateClick: (arg: any) => this.handleDateClick(arg)
